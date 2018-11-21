@@ -1,0 +1,150 @@
+<!-- IE friendly error message walkround.        
+     if error message from server is less than   
+     512 bytes IE v5+ will use its own error     
+     message instead of the one returned by      
+     server.                                 --><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta charset="utf-8" />
+    <title>
+      Página Web Bloqueada - Sophos Banking Solutions S.A.S.
+    </title>
+    <link rel="icon" href="http://www.sophosbanking.com/blocked/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="http://www.sophosbanking.com/blocked/favicon.ico" type="image/x-icon" />
+    <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz" rel="stylesheet" />
+    <style type="text/css">
+      body {
+        background-color: #000000;
+        background-image: url(http://www.sophosbanking.com/blocked/Background.jpg);
+        background-position: center top;
+        margin: 0
+      }
+      #logo{
+        margin-top: 70px;
+      }
+      #title {
+        color: #fff;
+        font-size: 70px;
+        padding-top: 40px;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+      }
+      .color-blue {
+        color: #00DDFF;
+      }
+      .margin-blocked{
+        margin-right: 10px;
+      }
+      .subtitle {
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        color: #fff;
+        font-size: 25px;
+        padding-top: 30px;
+      }
+      #tabla{
+        height: 180px;
+        background-color:rgba(0,0,0,0.5);
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .items {
+        color: #fff;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 20px;
+        opacity: 1;
+      }
+      .div-button {
+        margin-top: 50px;
+      }
+      #button {
+        background-color: #00DDFF;
+        padding: 22px;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 30px;
+        transition: all 300ms ease;
+        
+      }
+      #button:hover {
+        background: rgba(0,0,0,0);
+        color: #00DDFF;
+        box-shadow: inset 0 0 0 3px #00DDFF;
+      }
+      .fortiguard {
+        color: #fff;
+        font-family: 'Yanone Kaffeesatz', sans-serif;
+        font-size: 18px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <div align="center" id="logo">
+      <img src="http://www.sophosbanking.com/blocked/Logo.png" alt="" width="248" height="58" />
+    </div>
+    <div align="center" id="title">
+      <img class="margin-blocked" src="http://www.sophosbanking.com/blocked/Blocked.png" width="65" height="65" alt="" />
+      Página Web 
+      <span class="color-blue">
+        Bloqueada
+      </span>
+    </div>
+    <div class="subtitle" align="center">
+      Has intentado acceder a una página web que infringe 
+      <span class="color-blue">
+        tu política de uso de Internet.
+      </span>
+    </div>
+    <br />
+    <br />
+    <div id="tabla" align="center">
+      <p class="items">
+        <span class="color-blue">
+          URL:
+        </span>
+        http://www.elempleo.com/co/
+        <br />
+        <span class="color-blue">
+          Category:
+        </span>
+        Job Search
+        <br />
+        <span class="color-blue">
+          Client IP:
+        </span>
+        172.23.81.189
+        <br />
+        <span class="color-blue">
+          Server IP:
+        </span>
+        45.60.11.158
+        <br />
+        <span class="color-blue">
+          User name:
+        </span>
+        guest
+        <br />
+        <span class="color-blue">
+          Group name:
+        </span>
+        SSO_Guest_Users
+      </p>
+    </div>
+    <div class="subtitle" align="center">
+      Si Consideras que esta Web debería estar desbloqueada y quieres que sea reevaluada
+    </div>
+    <div class="div-button" align="center">
+      <a id="button" href="http://url.fortinet.net/rate/submit.php?id=4341707F295A7723226B6C31386E212F&amp;cat=22&amp;loc=http://www%2eelempleo%2ecom%2fco%2f&amp;ver=7">
+        Haz Clic Aqui
+      </a>
+    </div>
+    <div class="fortiguard" align="center">
+      Powered By 
+      <img src="http://www.sophosbanking.com/blocked/Fortyguard.png" width="120" height="13" alt="" />
+      
+      <span class="color-blue">
+        Sophos Banking Solutions @ All Rights Reserved.
+      </span>
+    </div>
+  
+
+</body></html>

@@ -1,0 +1,203 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<title>Web Authentication</title>
+<meta http-equiv="Cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+&lt;!--
+DIV.sidebar {
+    RIGHT: 0px;
+    POSITION: absolute;
+    TOP: -1px;
+    HEIGHT: 100%;
+    width: 200;
+}
+DIV.graybar {
+    RIGHT: 0px; POSITION: absolute; TOP: 0px; HEIGHT: 100%; BACKGROUND-COLOR: #f8f8f8
+}
+/* background not be shown for NEC */
+
+DIV.header {
+    BACKGROUND-POSITION: right 50%; LEFT: 0px; BACKGROUND-IMAGE:  url(images/background_web41.jpg); WIDTH: 100%; BACKGROUND-REPEAT: repeat; POSITION: absolute; TOP: 0px; HEIGHT: 52px; BACKGROUND-COLOR: #FFFFFF}
+
+
+DIV.content {
+    LEFT: 14px; MARGIN: 15px; POSITION: absolute; TOP: 60px
+}
+H1 {
+    FONT-WEIGHT: bold; FONT-SIZE: 19px; MARGIN: 16px 0px 0px 25px; COLOR: #ffffff; FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif
+}
+H2 {
+    FONT-WEIGHT: bold; FONT-SIZE: 15px; MARGIN: 10px 0px 0px 10px; COLOR: #336666; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+INPUT {
+    FONT-SIZE: 12px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+INPUT.button {
+    MARGIN-TOP: 10px; FONT-WEIGHT: bold; WIDTH: 80px; COLOR: #ffffff; BACKGROUND-COLOR: #669999
+}
+P {
+    FONT-SIZE: 12px; MARGIN: 0px 0px 10px; COLOR: #001133; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TD {
+    FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #336666; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TD.message {
+    FONT-WEIGHT: normal; COLOR: #000000
+}
+--&gt;
+</style>
+
+
+<noscript>
+&lt;meta HTTP-EQUIV="REFRESH" content="0; url=https://198.51.100.1/login_noscript.html"&gt;
+</noscript>
+
+<script language="javascript" src="/loginscript.js"></script>
+<script>
+function getErrorMsgIfAny(){
+ if(document.forms[0].err_flag.value == 1){
+    document.writeln(' \
+     &lt;tr align="center"&gt; &lt;td colspan="2" style="color:#CC0000"&gt;Login Error.&lt;/td&gt;\
+     &lt;/tr&gt;&lt;tr align="center"&gt; &lt;td width="350" class="message" colspan="2"&gt;The User Name and Password combination you have entered is invalid. Please try again.&lt;/td&gt;&lt;/tr&gt;\
+    &lt;tr&gt; &lt;td class="caption" colspan="2"&gt;&amp;nbsp;&lt;/td&gt;&lt;/tr&gt;');
+ }else{
+   document.writeln(' ');
+ }
+}
+
+function unhideform(){
+     document.getElementById("formId").style.display = "block";
+}
+
+</script>
+</head>
+<body bgcolor="#ffffff" text="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<form method="post" action="/login.html">
+<input type="hidden" name="buttonClicked" size="16" maxlength="15" value="0" />
+<input type="hidden" name="err_flag" size="16" maxlength="15" value="0" />
+<input type="hidden" name="err_msg" size="32" maxlength="31" value="" />
+<input type="hidden" name="info_flag" size="16" maxlength="15" value="0" />
+<input type="hidden" name="info_msg" size="32" maxlength="31" value="" />
+<input type="hidden" name="redirect_url" size="255" maxlength="255" value="" />
+<input type="hidden" name="network_name" size="64" maxlength="64" value="Guest Network" />
+<div id="formId">
+<table border="0" cellspacing="0" cellpading="0" width="100%">
+   <tbody><tr>
+     <td width="180" background="../../images/background_web41.jpg" align="middle" style="padding-bottom: 4px;">
+
+     <h1>Login</h1>
+     </td>
+
+     <td height="53" align="right" style="padding-bottom: 4px; padding-right: 20px;" background="../../images/background_web41.jpg"></td>
+
+   </tr>
+   <tr>
+        <td align="left" width="400">
+        <div class="content">
+            <table border="0" cellspacing="10" cellpadding="0">
+            <tbody><tr>
+                <td>
+                    <table border="0" cellspacing="10" cellpadding="0">
+                        <tbody><tr>
+                            <th align="left" width="400">
+                                Autenticación red Wifi
+                            </th>
+                        </tr>
+                        <tr>
+                            <td class="message" align="left" width="400">
+                                Por favor coloca tu nombre de usuario y contraseña asignada.  
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+            </tr>
+                <script>
+                    getErrorMsgIfAny();
+                </script> 
+
+            <tr>
+                <td>
+                    <table border="0" cellspacing="10" cellpadding="0">
+                        <tbody><tr>
+                            <td width="100" nowrap="">User Name</td>
+                            <td>
+                                <input type="TEXT" name="username" size="25" maxlength="80" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td nowrap="">Password</td>
+                            <td>
+                                <input type="Password" name="password" emweb_type="PASSWORD" autocomplete="off" onkeypress="submitOnEnter(event);" size="25" maxlength="127" value="" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td> </td>
+                            <td>
+                                <script>getHtmlForButton("Submit","Submit","button","submitAction()"); </script><input type="button" name="Submit" value="Submit" class="button" onclick="submitAction()" />
+
+                            </td>
+                        </tr>
+                    </tbody></table>
+                </td>
+             </tr>
+
+            </tbody></table>
+        </div>
+        </td>
+        <td align="right">
+            <table border="0" cellspacing="10" cellpadding="0">
+                <tbody><tr>
+                    <td align="right" style="padding-top: 25px; padding-right: 20px;" bgcolor="#ffffff">
+                    <div></div></td>
+                </tr>
+            </tbody></table>   
+        </td>
+   </tr>
+</tbody></table>
+</div>
+
+<div id="newLoginWebConsent" style="display:none; font-size:13px; font-family: 'CiscoSansThin, Helvetica Neue, Arial, Tahoma, sans-serif';">
+	<p id="welcomeMsg" style="text-align: center; font-size:20px; margin-top: 25px;">
+	</p>
+
+	<div style="margin:30px 10px 30px 10px">
+		<div id="content" style="border: 2px solid #bbbbbb; border-radius: 3px;  margin: 0 auto; padding: 10px; max-width: 600px;">
+			<div id="page1">
+				Por favor coloca tu nombre de usuario y contraseña asignada.
+				<br /><br /><br /><br />
+				<button class="tiny" type="button" id="loginConnectButton" onclick="submitAction();" disabled="">
+					Connect
+				</button>
+			</div>
+			<div id="page2" style="display: none">
+				This service is intended for use by authorized guests at this facility. This is an open/unprotected wireless network. By using this service, guests understand and accept that it is their responsibility to protect their own computer while connected to this service, and irrevocably waive any right, cause or action, remedy or other claim against the host with respect to any damage that may be caused to a computer while it is using this network.
+				<br /><br />
+				<button class="tiny" type="button" id="loginAcceptButton" onclick="show_accept_terms();">
+					Back
+				</button>
+			</div>
+		</div>
+	</div>
+	
+	<div style="text-align: center;">
+		
+	</div>
+</div>
+
+</form>
+<script>
+
+</script>
+
+
+<meta http-equiv="Cache-control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="-1" />
+
+
+
+</body></html>
